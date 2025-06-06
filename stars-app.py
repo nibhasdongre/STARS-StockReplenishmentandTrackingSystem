@@ -12,5 +12,5 @@ def get_stock_data():
     data = list(collection.find({}, {'_id': 0}))  # remove _id for cleaner output
     return jsonify(data)
 if __name__=="__main__":
-      port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 5000))
     app.run(debug=True)
