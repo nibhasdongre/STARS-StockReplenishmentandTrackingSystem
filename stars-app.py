@@ -14,7 +14,7 @@ def get_stock_data():
     return jsonify(data)
 @app.route("/", methods=["GET"])
 def home():
-    return "✅ Flask app is running and connected!"
+    return "Flask app is running and connected!"
 
 if __name__=="__main__":
     port = int(os.environ.get("PORT", 5000))
