@@ -11,6 +11,10 @@ collection = db["april_2025"]
 def get_stock_data():
     data = list(collection.find({}, {'_id': 0}))  # remove _id for cleaner output
     return jsonify(data)
+@app.route("/", methods=["GET"])
+def home():
+    return "✅ Flask app is running and connected!"
+
 if __name__=="__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=True)
