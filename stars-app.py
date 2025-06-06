@@ -3,6 +3,7 @@ from pymongo import MongoClient
 import os
 from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 client = MongoClient('mongodb+srv://apkoundinya:v3VVVZ1Fj3vOFf5g@cluster0.s4d3zix.mongodb.net/')
 db = client["STARS"]
 collection = db["april_2025"]
